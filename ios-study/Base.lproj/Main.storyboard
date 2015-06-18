@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hQZ-JB-RsT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--顔文字占い-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helptan" translatesAutoresizingMaskIntoConstraints="NO" id="ace-gz-Bo2">
+                                <rect key="frame" x="228" y="235" width="131" height="131"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFT-BE-aVy">
+                                <rect key="frame" x="241" y="177" width="105" height="30"/>
+                                <state key="normal" title="私、占います！">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZfA-Vb-aba" kind="show" id="1Ta-ec-XGy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="ace-gz-Bo2" secondAttribute="centerY" id="ApO-93-kRZ"/>
+                            <constraint firstAttribute="centerX" secondItem="ace-gz-Bo2" secondAttribute="centerX" constant="7" id="Iud-8d-abf"/>
+                            <constraint firstAttribute="centerX" secondItem="oFT-BE-aVy" secondAttribute="centerX" constant="7" id="itz-5d-f66"/>
+                            <constraint firstAttribute="centerY" secondItem="oFT-BE-aVy" secondAttribute="centerY" constant="108" id="qma-G0-2Ut"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="顔文字占い" id="xms-y4-euP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650" y="115"/>
+        </scene>
+        <!--ResultViewController-->
+        <scene sceneID="LvW-ML-3E3">
+            <objects>
+                <viewController title="ResultViewController" id="ZfA-Vb-aba" customClass="ResultViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EmM-Cy-Ya6"/>
+                        <viewControllerLayoutGuide type="bottom" id="0So-MA-Kzt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3I1-e2-XcE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(ﾟＡﾟ;)ｺﾞｸﾘ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEM-Nd-L0o">
+                                <rect key="frame" x="258" y="290" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32549020649999999" green="0.71764707569999997" blue="0.73333334920000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="cEM-Nd-L0o" secondAttribute="centerY" id="EDd-ye-boR"/>
+                            <constraint firstAttribute="centerY" secondItem="cEM-Nd-L0o" secondAttribute="centerY" constant="56" id="X0p-e9-w8I"/>
+                            <constraint firstAttribute="centerX" secondItem="cEM-Nd-L0o" secondAttribute="centerX" id="a4O-KU-cUm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="X0p-e9-w8I"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="結果" id="bIS-d9-BC8"/>
+                    <connections>
+                        <outlet property="label" destination="cEM-Nd-L0o" id="v3y-kd-5sL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kNc-a7-d2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2335" y="115"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="usQ-Qw-r3e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hQZ-JB-RsT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="52k-TR-0FT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="qh1-C1-jrU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xjz-VC-NLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984" y="-578"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="helptan" width="131" height="131"/>
+    </resources>
+</document>
